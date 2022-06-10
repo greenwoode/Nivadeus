@@ -1,9 +1,16 @@
 # eclipse
-bin
-*.launch
-.settings
 .metadata
-.classpath
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+*.launch
 
 # Package Files #
 *.jar
