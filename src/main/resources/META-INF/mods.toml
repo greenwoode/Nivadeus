@@ -2,13 +2,13 @@ modLoader="javafml" #mandatory
 
 loaderVersion="[40,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 
-license="All rights reserved"
+license="MIT"
 
 [[mods]] #mandatory
 
 modId="nivadeus" #mandatory
 
-version="1.18.2-1.0.0" #mandatory
+version="0.0.1-1.18.2" #mandatory
 
 displayName="Nivadeus" #mandatory
 
@@ -33,7 +33,7 @@ nodes to define the sequence. These nodes will be unlocked in tiers
 while progressing through the mod by playing.
 '''
 
-[[dependencies.examplemod]] #optional
+[[dependencies.nivadeus]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -46,7 +46,7 @@ while progressing through the mod by playing.
     side="BOTH"
     
 # Here's another dependency
-[[dependencies.examplemod]]
+[[dependencies.nivadeus]]
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
