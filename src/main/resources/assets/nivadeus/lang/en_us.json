@@ -6,6 +6,11 @@
 	"block.nivadeus.test_block" : "Test Block",
 	"block.nivadeus.test_ore" : "Test Ore",
 	
-	"itemGroup.nivadeusmodtab": "Nivadeus"
+	"itemGroup.nivadeusmodtab": "Nivadeus",
+	
+	"key.categories.nivadeus": "Nivadeus",
+	"key.absorbMana": "Absorb Mana",
+	
+	"message.nomana": "No mana left in this chunk"
 	
 }

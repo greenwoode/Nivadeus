@@ -1,33 +1,46 @@
 package com.happy.nivadeus;
 
-import com.happy.nivadeus.block.ModBlocks;
-import com.happy.nivadeus.item.ModItems;
+import com.happy.nivadeus.common.block.ModBlocks;
+import com.happy.nivadeus.common.item.ModItems;
+import com.happy.nivadeus.setup.ClientSetup;
+import com.happy.nivadeus.setup.Config;
+import com.happy.nivadeus.setup.ModSetup;
+import com.happy.nivadeus.setup.Registration;
 import com.mojang.logging.LogUtils;
+
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
+
 import org.slf4j.Logger;
 
 @Mod(Nivadeus.MOD_ID)
 public class Nivadeus
 {
-	public static final String MOD_ID = "nivadeus";
-    
+	public static final String MOD_ID = "nivadeus";    
 	private static final Logger LOGGER = LogUtils.getLogger();
 
 	public Nivadeus() {
-		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-		
-		ModItems.register(eventBus);
-		ModBlocks.register(eventBus);
-		
-		// Register the setup method for modloading
-		eventBus.addListener(this::setup);
 		
 		
+		// Register the deferred registry
+		ModSetup.setup();
+		Registration.init();
+		Config.register();
+	
+		IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
+		
+		ModItems.register(modBus);
+		ModBlocks.register(modBus);
+		modBus.addListener(this::setup);
+		modBus.addListener(ModSetup::init);
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> modBus.addListener(ClientSetup::init));
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

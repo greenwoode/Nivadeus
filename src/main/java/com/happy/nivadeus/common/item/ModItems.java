@@ -1,4 +1,4 @@
-package com.happy.nivadeus.item;
+package com.happy.nivadeus.common.item;
 
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

@@ -1,4 +1,4 @@
-package com.happy.nivadeus.item;
+package com.happy.nivadeus.common.item;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;

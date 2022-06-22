@@ -1,10 +1,10 @@
-package com.happy.nivadeus.block;
+package com.happy.nivadeus.common.block;
 
 import java.util.function.Supplier;
 
 import com.happy.nivadeus.Nivadeus;
-import com.happy.nivadeus.item.ModCreativeModeTab;
-import com.happy.nivadeus.item.ModItems;
+import com.happy.nivadeus.common.item.ModCreativeModeTab;
+import com.happy.nivadeus.common.item.ModItems;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
