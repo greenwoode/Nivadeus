@@ -1,6 +1,8 @@
 package com.eight.nivadeus;
 
+import com.eight.nivadeus.common.BlockEntity.ModBlockEntity;
 import com.eight.nivadeus.common.block.ModBlocks;
+import com.eight.nivadeus.common.containers.ModContainers;
 import com.eight.nivadeus.common.item.ModItems;
 import com.eight.nivadeus.setup.ClientSetup;
 import com.eight.nivadeus.setup.Config;
@@ -31,17 +33,22 @@ public class Nivadeus
 		
 		// Register the deferred registry
 		ModSetup.setup();
-		Registration.init();
+		//Registration.init();
 		Config.register();
 	
 		IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
 		
 		ModItems.register(modBus);
 		ModBlocks.register(modBus);
+		ModBlockEntity.register(modBus);
+		ModContainers.register(modBus);
+		
 		modBus.addListener(this::setup);
 		modBus.addListener(ModSetup::init);
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> modBus.addListener(ClientSetup::init));
 		MinecraftForge.EVENT_BUS.register(this);
+		
+		
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {

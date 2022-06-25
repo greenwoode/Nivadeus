@@ -22,11 +22,15 @@ public class ModItems {
 	//Items
 	public static final RegistryObject<Item> TEST_INGOT = ITEMS.register("test_ingot",
 			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.NIVADEUS_TAB)));
+	
 	public static final RegistryObject<Item> TEST_NUGGET = ITEMS.register("test_nugget", 
 			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.NIVADEUS_TAB)));
 	
 	public static final RegistryObject<Item> MANA_BALL = ITEMS.register("mana_ball",
 			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.NIVADEUS_TAB)));
+	
+	public static final RegistryObject<Item> MANA_EYE = ITEMS.register("mana_eye",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.NIVADEUS_TAB).stacksTo(8)));
 	
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);		

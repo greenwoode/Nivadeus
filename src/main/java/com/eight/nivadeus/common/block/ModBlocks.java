@@ -3,6 +3,7 @@ package com.eight.nivadeus.common.block;
 import java.util.function.Supplier;
 
 import com.eight.nivadeus.Nivadeus;
+import com.eight.nivadeus.common.block.customBlock.TestMagicBlock;
 import com.eight.nivadeus.common.item.ModCreativeModeTab;
 import com.eight.nivadeus.common.item.ModItems;
 
@@ -20,14 +21,17 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModBlocks {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Nivadeus.MOD_ID);
 	
-	// Blocks
+	// Blocks Registration
 	public static final RegistryObject<Block> TEST_BLOCK = registerBlock("test_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()),
 			ModCreativeModeTab.NIVADEUS_TAB);
-	
 	public static final RegistryObject<Block> TEST_ORE = registerBlock("test_ore",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(4f).requiresCorrectToolForDrops()),
 			ModCreativeModeTab.NIVADEUS_TAB);
+	
+	public static final RegistryObject<TestMagicBlock>TEST_MAGIC_BLOCK = registerBlock("test_magic_block"
+			, TestMagicBlock::new, ModCreativeModeTab.NIVADEUS_TAB);
+	
 	
 	// Helper methods
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){

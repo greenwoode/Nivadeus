@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GMG",
+    " W ",
+    "GSG"
+  ],
+  "key": {
+    "S":{
+	  "item": "minecraft:stone"
+	},
+    "W":{
+	  "tag": "minecraft:planks"
+	},
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "M":{
+	  "item": "nivadeus:mana_eye"
+	}
+  },
+  "result": {
+    "item": "nivadeus:test_magic_block"
+  }
+}
