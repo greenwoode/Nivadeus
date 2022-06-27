@@ -11,8 +11,10 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -33,6 +35,13 @@ public class ModBlocks {
 	public static final RegistryObject<TestMagicBlock>TEST_MAGIC_BLOCK = registerBlock("test_magic_block"
 			, TestMagicBlock::new, ModCreativeModeTab.NIVADEUS_TAB);
 	
+	public static final RegistryObject<Block> MANA_BATTERY = registerBlock("mana_battery",
+            () -> new Block(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_BROWN)
+            		.strength(3.0f, 1)
+            		.sound(SoundType.WOOD)
+            		.requiresCorrectToolForDrops()),
+            ModCreativeModeTab.NIVADEUS_TAB);
+
 	
 	// Helper methods
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){

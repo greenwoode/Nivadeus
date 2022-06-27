@@ -37,6 +37,11 @@ public class ModItems {
 	
 	public static final RegistryObject<Item> GLITCH_EGG = ITEMS.register("glitch", 
 			() -> new ForgeSpawnEggItem(ModEntity.TEST_ENTITY, 0xf200ff, 0x000000, new Item.Properties().tab(ModCreativeModeTab.NIVADEUS_TAB)));
+
+    public static final RegistryObject<Item> WAND_FIRE = ITEMS.register("wand_test_fire",
+            () -> new Wand(
+                    new Item.Properties().tab(ModCreativeModeTab.NIVADEUS_TAB).stacksTo(1)
+            ));
 	
 	
 	public static void register(IEventBus eventBus) {

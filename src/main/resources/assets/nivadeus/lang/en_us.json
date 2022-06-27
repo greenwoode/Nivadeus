@@ -18,6 +18,14 @@
 	"message.testmagicblock": "Test Magic Block",
 	
 	"screen.nivadeus.testmagicblock": "Test Magic Block",
-	"message.nomana": "No mana left in this chunk"
+	"message.nomana": "No mana left in this chunk",
+	
+	
+	
+	"item.nivadeus.mana_eye": "Mana Eye",
+    "item.nivadeus.wand_test_fire": "Wand of Fire",
+    "itemGroup.nivadeus": "Nivadeus",
+
+    "block.nivadeus.mana_battery": "Mana Battery"
 	
 }

@@ -7,7 +7,7 @@ public class ModCreativeModeTab {
 	public static final CreativeModeTab NIVADEUS_TAB = new CreativeModeTab("nivadeusmodtab") {
 		@Override
 		public ItemStack makeIcon() {
-			return new ItemStack(ModItems.MANA_BALL.get());
+			return new ItemStack(ModItems.MANA_EYE.get());
 		}
 	};
 	
