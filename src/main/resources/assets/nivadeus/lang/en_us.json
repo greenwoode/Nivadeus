@@ -1,0 +1,23 @@
+{
+	"item.nivadeus.test_ingot" : "Test Ingot",
+	"item.nivadeus.test_nugget" : "Test Nugget",
+	"item.nivadeus.mana_ball": "Mana Ball",
+	"item.nivadeus.mana_eye": "Mana Eye",
+	
+	"block.nivadeus.test_block" : "Test Block",
+	"block.nivadeus.test_ore" : "Test Ore",
+	"block.nivadeus.test_magic_block": "Magic Block",
+	
+	"itemGroup.nivadeusmodtab": "Nivadeus",
+	
+	"key.categories.nivadeus": "Nivadeus",
+	"key.absorbMana": "Absorb Mana",
+	
+	
+	
+	"message.testmagicblock": "Test Magic Block",
+	
+	"screen.nivadeus.testmagicblock": "Test Magic Block",
+	"message.nomana": "No mana left in this chunk"
+	
+}

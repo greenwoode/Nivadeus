@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nivadeus:test_ingot"
+    }
+  ],
+  "result": {
+    "item": "nivadeus:test_nugget",
+    "count": 9
+  }
+}

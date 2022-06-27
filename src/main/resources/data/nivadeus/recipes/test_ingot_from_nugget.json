@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "test_ingot",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "nivadeus:test_nugget"
+    }
+  },
+  "result": {
+    "item": "nivadeus:test_ingot"
+  }
+}
