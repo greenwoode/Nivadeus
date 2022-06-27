@@ -27,9 +27,7 @@ public class PacketAbsorbMana {
 	public PacketAbsorbMana(FriendlyByteBuf buf) {
 	}
 	
-	public void toBytes(FriendlyByteBuf buf) {
-		
-	}
+	public void toBytes(FriendlyByteBuf buf) {}
 	
 	/*
 	 * This fires when the server recieved a packet

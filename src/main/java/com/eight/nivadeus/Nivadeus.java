@@ -29,26 +29,14 @@ public class Nivadeus
 	private static final Logger LOGGER = LogUtils.getLogger();
 
 	public Nivadeus() {
-		
-		
-		// Register the deferred registry
-		ModSetup.setup();
-		//Registration.init();
-		Config.register();
-	
 		IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
-		
-		ModItems.register(modBus);
-		ModBlocks.register(modBus);
-		ModBlockEntity.register(modBus);
-		ModContainers.register(modBus);
+
+		Registration.init(modBus);
 		
 		modBus.addListener(this::setup);
 		modBus.addListener(ModSetup::init);
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> modBus.addListener(ClientSetup::init));
 		MinecraftForge.EVENT_BUS.register(this);
-		
-		
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {

@@ -1,74 +1,27 @@
 package com.eight.nivadeus.setup;
 
-import java.util.function.Supplier;
-
-import com.eight.nivadeus.Nivadeus;
-//import com.eight.nivadeus.common.item.ModCreativeModeTab;
+import com.eight.nivadeus.common.BlockEntity.ModBlockEntity;
+import com.eight.nivadeus.common.block.ModBlocks;
+import com.eight.nivadeus.common.containers.ModContainers;
+import com.eight.nivadeus.common.entities.ModEntity;
 import com.eight.nivadeus.common.item.ModItems;
 
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
-
-class ModCreativeModeTab {
-	public static final CreativeModeTab NIVADEUS_TAB = new CreativeModeTab("nivadeusmodtab") {
-		@Override
-		public ItemStack makeIcon() {
-			return new ItemStack(ModItems.MANA_BALL.get());
-		}
-	};
-	
-}
 
 public class Registration {
-	//TODO: move registration from items & blocks (and future registration stuff) to here.
-	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Nivadeus.MOD_ID);
-	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Nivadeus.MOD_ID);
-	
-	public static void init() {
-		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-		BLOCKS.register(bus);
-		ITEMS.register(bus);
-	}
-	
-	// Registering Blocks
-	public static final RegistryObject<Block> TEST_BLOCK = registerBlock("test_block",
-			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()),
-			ModCreativeModeTab.NIVADEUS_TAB);
-	
-	public static final RegistryObject<Block> TEST_ORE = registerBlock("test_ore",
-			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(4f).requiresCorrectToolForDrops()),
-			ModCreativeModeTab.NIVADEUS_TAB);
-	
-	////////////////////////////////////////////////////////////////////////////////
-	
-	// Registering Items	
-	public static final RegistryObject<Item> TEST_INGOT = ITEMS.register("test_ingot",
-			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.NIVADEUS_TAB)));
-	public static final RegistryObject<Item> TEST_NUGGET = ITEMS.register("test_nugget", 
-			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.NIVADEUS_TAB)));	
-	public static final RegistryObject<Item> MANA_BALL = ITEMS.register("mana_ball",
-			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.NIVADEUS_TAB)));
 
-	
-	// Helper methods
-	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
-		RegistryObject<T> toReturn = BLOCKS.register(name, block);
-		registerBlockItem(name,toReturn,tab);
-		return toReturn;
+	public static void init(IEventBus modBus) {
+		// Register the deferred registry
+		ModSetup.setup();
+		
+		//Registration.init();
+		Config.register();
+		
+		// Mod Blocks/Items/Entities register
+		ModItems.register(modBus);
+		ModBlocks.register(modBus);
+		ModBlockEntity.register(modBus);
+		ModContainers.register(modBus);
+		ModEntity.register(modBus);
 	}
-	
-	private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab){
-		return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
-	}
-
 }

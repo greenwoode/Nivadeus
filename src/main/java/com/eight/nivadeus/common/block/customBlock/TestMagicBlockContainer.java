@@ -38,10 +38,10 @@ public class TestMagicBlockContainer extends AbstractContainerMenu{
 		
 		if (blockEntity != null) {
 			blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h ->{
-				addSlot(new SlotItemHandler(h,0,233,125));	
+				addSlot(new SlotItemHandler(h,0,233,148));	
 			});
 		}
-		layoutPlayerInventorySlots(47,151);
+		layoutPlayerInventorySlots(73,174);
 		trackMana();
 	}
 

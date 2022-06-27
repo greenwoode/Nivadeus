@@ -25,6 +25,7 @@ public class ModBlocks {
 	public static final RegistryObject<Block> TEST_BLOCK = registerBlock("test_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()),
 			ModCreativeModeTab.NIVADEUS_TAB);
+	
 	public static final RegistryObject<Block> TEST_ORE = registerBlock("test_ore",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(4f).requiresCorrectToolForDrops()),
 			ModCreativeModeTab.NIVADEUS_TAB);

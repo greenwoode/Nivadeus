@@ -34,7 +34,7 @@ public class TestMagicBlockScreen extends AbstractContainerScreen<TestMagicBlock
 	@SuppressWarnings("resource")
 	@Override
 	protected void renderLabels(PoseStack pPoseStack, int pMouseX, int pMouseY) {
-		drawString(pPoseStack, Minecraft.getInstance().font, "Mana: " + menu.getMana(), 10, 10, 0xffffff);
+		drawString(pPoseStack, Minecraft.getInstance().font, "Mana: " + menu.getMana(), 4, 173, 0xffffff);
 	}
 
 	@Override

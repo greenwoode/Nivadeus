@@ -37,8 +37,8 @@ public class TestMagicBlock extends Block implements EntityBlock {
 	public TestMagicBlock() {
 		super(Properties.of(Material.WOOD)
 				.sound(SoundType.WOOD)
-				.strength(2.0f)
-				.requiresCorrectToolForDrops()
+				.strength(4f)
+				
 				
 		);
 	}	
