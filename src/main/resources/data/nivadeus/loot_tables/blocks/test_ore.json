@@ -27,7 +27,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "nivadeus:test_nugget",
+              "name": "nivadeus:test_clump",
               "functions": [
                 {
                   "function": "minecraft:set_count",
