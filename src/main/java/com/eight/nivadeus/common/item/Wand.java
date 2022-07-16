@@ -26,7 +26,7 @@ public class Wand extends Item {
 
         if(!itemStack.hasTag()){
             CompoundTag spellTag = new CompoundTag();
-            spellTag.putString("nivadeus.spell", "TP(FP(MU(FP(MU(FP(MU(FP(MU(FP(MU(OOP(),1)),1)),1)),1)),1)))");
+            spellTag.putString("nivadeus.spell", "TP(FP(MAP(FP(MAP(FP(MAP(FP(MS(FP(MW(OOP(),1)),1)),1)),1)),1)))");
             itemStack.setTag(spellTag);
         }
 
@@ -64,5 +64,5 @@ public class Wand extends Item {
         return super.use(world, player, hand);
     }
 
-
+    
 }
