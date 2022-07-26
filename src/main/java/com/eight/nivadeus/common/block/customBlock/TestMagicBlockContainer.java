@@ -106,7 +106,8 @@ public class TestMagicBlockContainer extends AbstractContainerMenu{
             } else {
             	// Move legal item from inventory to output slot
                 if (stack.getItem().getRegistryName()  == Items.PAPER.getRegistryName()
-                		|| stack.getItem().getRegistryName()  == Items.BOOK.getRegistryName()) {
+                		|| stack.getItem().getRegistryName()  == Items.BOOK.getRegistryName()
+                		|| stack.getItem().getRegistryName() == Items.PUFFERFISH.getRegistryName()) {
                     if (!this.moveItemStackTo(stack, 0, 1, false)) {
                         return ItemStack.EMPTY;
                     }

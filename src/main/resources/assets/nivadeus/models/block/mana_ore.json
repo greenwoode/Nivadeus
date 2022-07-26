@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "nivadeus:block/mana_ore"
+	}
+}

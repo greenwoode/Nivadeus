@@ -32,6 +32,9 @@ public class ModItems {
 	public static final RegistryObject<Item> TEST_CLUMP = ITEMS.register("test_clump", 
 			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.NIVADEUS_TAB)));
 	
+	public static final RegistryObject<Item> MANA_CLUSTER = ITEMS.register("mana_cluster", 
+			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.NIVADEUS_TAB)));
+	
 	public static final RegistryObject<Item> MANA_BALL = ITEMS.register("mana_ball",
 			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.NIVADEUS_TAB)));
 	
