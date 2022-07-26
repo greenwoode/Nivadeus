@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " M ",
+    "MEM",
+    " M "
+  ],
+  "key": {
+	"M": {
+		"item":"nivadeus:mana_cluster"
+	},
+	"E": {
+		"item":"minecraft:ender_pearl"
+	}
+  },
+  "result": {
+    "item": "nivadeus:mana_eye"
+  }
+}

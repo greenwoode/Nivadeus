@@ -32,6 +32,10 @@ public class ModBlocks {
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(4f).requiresCorrectToolForDrops()),
 			ModCreativeModeTab.NIVADEUS_TAB);
 	
+	public static final RegistryObject<Block> MANA_ORE = registerBlock("mana_ore",
+			() -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()),
+			ModCreativeModeTab.NIVADEUS_TAB);
+	
 	public static final RegistryObject<TestMagicBlock>TEST_MAGIC_BLOCK = registerBlock("test_magic_block"
 			, TestMagicBlock::new, ModCreativeModeTab.NIVADEUS_TAB);
 	

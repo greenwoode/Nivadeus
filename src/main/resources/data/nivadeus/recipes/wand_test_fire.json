@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  B",
+    " M ",
+    "S  "
+  ],
+  "key": {
+	"M": {
+		"item":"nivadeus:mana_eye"
+	},
+	"B": {
+		"item":"minecraft:blaze_powder"
+	},
+	"S": {
+		"item":"minecraft:stick"
+	}
+  },
+  "result": {
+    "item": "nivadeus:wand_test_fire"
+  }
+}

@@ -10,7 +10,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "nivadeus:test_ore",
+              "name": "nivadeus:mana_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -27,7 +27,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "nivadeus:test_clump",
+              "name": "nivadeus:mana_cluster",
               "functions": [
                 {
                   "function": "minecraft:set_count",

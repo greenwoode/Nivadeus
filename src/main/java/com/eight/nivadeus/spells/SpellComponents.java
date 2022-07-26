@@ -53,12 +53,12 @@ public class SpellComponents {
     }
 
     public static Spell moveTowardPlayer(Spell spell, double dis){
-        spell.vecPOS = spell.vecPOS.add(spell.origin.vectorTo(spell.vecPOS).normalize().multiply(-dis,0f,-dis));
+        spell.vecPOS = spell.vecPOS.add(spell.origin.vectorTo(spell.vecPOS).normalize().multiply(-dis,-dis,-dis));
 
         return spell;
     }
     public static Spell moveAwayPlayer(Spell spell, double dis){
-        spell.vecPOS = spell.vecPOS.add(spell.origin.vectorTo(spell.vecPOS).normalize().multiply(dis,0f,dis));
+        spell.vecPOS = spell.vecPOS.add(spell.origin.vectorTo(spell.vecPOS).normalize().multiply(dis,dis,dis));
 
         return spell;
     }

@@ -57,11 +57,11 @@ public class TestMagicBlockBE extends BlockEntity {
 			public boolean isItemValid(int slot, ItemStack stack) {
 				if (stack == null 
 						|| stack.getItem().getRegistryName() == Items.BOOK.getRegistryName() 
-						|| stack.getItem().getRegistryName() == Items.PAPER.getRegistryName()) {
+						|| stack.getItem().getRegistryName() == Items.PAPER.getRegistryName()
+						|| stack.getItem().getRegistryName() == Items.PUFFERFISH.getRegistryName()){
 					return super.isItemValid(slot, stack);			
 				}
 				return false;
-				
 			}
 
 			@Override

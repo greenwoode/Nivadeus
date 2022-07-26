@@ -2,7 +2,7 @@
   "type": "minecraft:smelting",
   "group": "test_ingot",
   "ingredient": {
-    "item": "nivadeus:test_ore"
+    "item": "nivadeus:test_clump"
   },
   "result": "nivadeus:test_ingot",
   "experience": 0.7,
