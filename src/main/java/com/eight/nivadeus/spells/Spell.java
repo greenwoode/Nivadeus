@@ -8,13 +8,13 @@ import net.minecraft.world.phys.Vec3;
 
 public class Spell {
 
-    public LivingEntity owner;
+    public Player owner;
     public Vec3 vecPOS;
     public Direction castFacing;
     public Vec3 origin;
     public Level world;
 
-    public Spell(LivingEntity user, Level pWorld){
+    public Spell(Player user, Level pWorld){
 
         this.owner = user;
         this.origin = new Vec3(this.owner.getX(), this.owner.getY(), this.owner.getZ());

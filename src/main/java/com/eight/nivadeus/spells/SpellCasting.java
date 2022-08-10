@@ -1,13 +1,14 @@
 package com.eight.nivadeus.spells;
 
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
 import javax.swing.text.html.parser.Entity;
 
 public class SpellCasting {
 
-    public static void cast(Level world, LivingEntity holder, String spellEncoded){
+    public static void cast(Level world, Player holder, String spellEncoded){
 
         Spell spell = new Spell(holder, world);
 
@@ -42,6 +43,7 @@ public class SpellCasting {
         String[] args = SpellCasting.splitArgs(argsAll);
 
         //System.out.println(type); //used to check parsing
+        //System.out.println(args); //used to check parsing
 
         switch (type){
 
@@ -80,6 +82,15 @@ public class SpellCasting {
 
             case "TP":
                 return SpellComponents.teleportOwner(parseAndCast(spell, args[0]));
+
+            case "SCP":
+                return SpellComponents.singleCircleParticle(parseAndCast(spell, args[0]), Double.parseDouble(args[1]), Integer.parseInt(args[2]), Double.parseDouble(args[3]));
+
+            case "MCP":
+                return SpellComponents.multiCircleParticle(parseAndCast(spell, args[0]), Integer.parseInt(args[1]), Double.parseDouble(args[2]), Double.parseDouble(args[3]), Integer.parseInt(args[4]));
+
+            case "LCU":
+                return SpellComponents.launchCasterUp(parseAndCast(spell, args[0]),Double.parseDouble(args[1]));
 
             default:
                 System.out.println("spell type not found");
